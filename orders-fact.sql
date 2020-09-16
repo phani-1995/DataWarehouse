@@ -11,12 +11,7 @@ LINES TERMINATED BY '\n';
 
 create table order_dim(order_id INT primary key, order_no INT, order_amt INT,
 eff_date DATE, exp_date DATE);
--- drop table order_dim;
--- ALTER TABLE order_dim
--- ADD COLUMN order_amt INT AFTER order_no;
 
--- Insert into order_dim(order_amt)
--- values(5000.00),(3000.00),(4000.00),(6000.00),(8000.00),(10000.00);
 
 LOAD DATA LOCAL INFILE '/home/phani/Star Schema/datasets/orders.csv' 
 INTO TABLE order_dim
